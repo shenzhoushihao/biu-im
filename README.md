@@ -1,2 +1,2 @@
-# biuim
+# biu-im-server
 biu-biu IM
