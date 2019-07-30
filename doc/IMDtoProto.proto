@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package protocol;
+
+option java_package = "com.biubiu.common.protocol";
+option java_outer_classname = "IMDto";
+
+message IMDtoProtocol {
+  string userId = 1;
+  string username = 2;
+  string message = 3;
+  int32 type = 4;
+  string ext = 5;
+  string timestap = 6;
+}

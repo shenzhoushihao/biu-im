@@ -11,6 +11,7 @@
 		<module>biu-im-common</module>
 		<module>biu-im-server</module>
 		<module>biu-im-client</module>
+		<module>biu-im-route</module>
 	</modules>
 
 	<properties>
@@ -19,6 +20,7 @@
 		<lombok.version>1.18.8</lombok.version>
 		<protobuf.version>3.7.0</protobuf.version>
 		<fastjson.version>1.2.58</fastjson.version>
+		<okhttp.version>3.14.2</okhttp.version>
 		<guava.version>28.0-jre</guava.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -35,6 +37,11 @@
 			<dependency>
 				<groupId>com.biubiu.im</groupId>
 				<artifactId>biu-im-common</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.biubiu.im</groupId>
+				<artifactId>biu-im-route</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
@@ -56,6 +63,16 @@
 				<groupId>com.google.guava</groupId>
 				<artifactId>guava</artifactId>
 				<version>${guava.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.github.sgroschupf</groupId>
+				<artifactId>zkclient</artifactId>
+				<version>0.1</version>
+			</dependency>
+			<dependency>
+				<groupId>com.squareup.okhttp3</groupId>
+				<artifactId>okhttp</artifactId>
+				<version>${okhttp.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

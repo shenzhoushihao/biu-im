@@ -21,6 +21,15 @@ public class IMClientConfiguation {
 	@Value("${netty.client.workgroup.size:4}")
 	private int clientThreadGroupSize;
 
+	@Value("${netty.server.tcp.buf:1024}")
+	private int tcpBuffer;
+
+	@Value("${netty.client.send.buf:65536}")
+	private int sendBuffer;
+
+	@Value("${netty.client.receive.buf:65536}")
+	private int receiveBuffer;
+
 	public boolean checkConfig() {
 		if (StringUtils.isBlank(imProtocolHost)) {
 			log.error("没有指定IM服务端的地址: [biu-im.protocol.host], Sorry, 应用服务退出!");

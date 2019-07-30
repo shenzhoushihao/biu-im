@@ -10,7 +10,7 @@ import com.biubiu.server.thread.ServerNioThreadGroup;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * IM 服务器端关闭
+ * IM server close
  */
 @Slf4j
 @Component
@@ -31,6 +31,6 @@ public class BiuIMServerClose implements ApplicationListener<ContextClosedEvent>
 		if (nioThreadGroup.getBoss() != null) {
 			nioThreadGroup.getBoss().shutdownGracefully().syncUninterruptibly();
 		}
-		log.info("关闭 IMServer 成功");
+		log.info("close IMServer success.");
 	}
 }
